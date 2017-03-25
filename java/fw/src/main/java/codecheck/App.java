@@ -5,28 +5,28 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-
+// test
 public class App {
 	
-	// s‰ñ”
+	// è©¦è¡Œå›æ•°
 	private int n;
-	// ’PŒêŒR
+	// å˜èªè»
 	private ArrayList<String> words;
-	// ’¼‘O‚Ì’PŒê‚ÌÅŒã‚Ì•¶š
+	// ç›´å‰ã®å˜èªã®æœ€å¾Œã®æ–‡å­—
 	private char tailChar;
-	// ‘I‘ğ‚³‚ê‚½’PŒê
+	// é¸æŠã•ã‚ŒãŸå˜èª
 	private String selectedWord;
-	// æUAI‚Ì‹N“®ƒvƒƒOƒ‰ƒ€
+	// å…ˆæ”»AIã®èµ·å‹•ãƒ—ãƒ­ã‚°ãƒ©ãƒ 
 	private String firstAI;
-	// ŒãUAI‚Ì‹N“®ƒvƒƒOƒ‰ƒ€
+	// å¾Œæ”»AIã®èµ·å‹•ãƒ—ãƒ­ã‚°ãƒ©ãƒ 
 	private String secondAI;
 	
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-	 * ƒtƒB[ƒ‹ƒh‚Ì‰Šú‰»
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+	 * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®åˆæœŸåŒ–
 	 * 
-	 * @param w@ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“ˆø”
-	 * 			i0: æUAI‚Ì‹N“®ƒvƒƒOƒ‰ƒ€, 1: ŒãUAI‚Ì‹N“®ƒvƒƒOƒ‰ƒ€, 2: ŠJn’PŒê, 3~: ’PŒêŒQj
+	 * @param wã€€ã‚³ãƒãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³å¼•æ•°
+	 * 			ï¼ˆ0: å…ˆæ”»AIã®èµ·å‹•ãƒ—ãƒ­ã‚°ãƒ©ãƒ , 1: å¾Œæ”»AIã®èµ·å‹•ãƒ—ãƒ­ã‚°ãƒ©ãƒ , 2: é–‹å§‹å˜èª, 3~: å˜èªç¾¤ï¼‰
 	 */
 	public App(String[] w){
 		n = 0;
@@ -34,7 +34,7 @@ public class App {
 		firstAI = w[0];
 		secondAI = w[1];
 		
-		// ‰‚ß‚Ì•¶š‚ÌŠi”[
+		// åˆã‚ã®æ–‡å­—ã®æ ¼ç´
 		selectedWord = w[2];
 		setTailChar(selectedWord);
 		
@@ -45,7 +45,7 @@ public class App {
 	
 	/**
 	 * calledAI
-	 * AI‚Ì‹N“®ƒvƒƒOƒ‰ƒ€‚ÌÀs‚ÆŒ‹‰Êæ“¾
+	 * AIã®èµ·å‹•ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®å®Ÿè¡Œã¨çµæœå–å¾—
 	 * 
 	 * @throws Exception
 	 */
@@ -56,7 +56,7 @@ public class App {
 		command.add("sh");
 
 		try{
-			//*** AI‚Ì‹N“®ƒvƒƒOƒ‰ƒ€‚ÌÀs ***//
+			//*** AIã®èµ·å‹•ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®å®Ÿè¡Œ ***//
 			if(n%2 == 0){
 				command.add(firstAI);
 			}else{
@@ -69,7 +69,7 @@ public class App {
 			p.waitFor();
 			//************************//
 
-			//*** •W€o—ÍŒ‹‰Ê‚Ìæ“¾ ***//
+			//*** æ¨™æº–å‡ºåŠ›çµæœã®å–å¾— ***//
 			BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
 			return reader.readLine();
 			
@@ -84,9 +84,9 @@ public class App {
 	
 	/**
 	 * printPlay
-	 * ‘Îí’†‚Ìo—Í
+	 * å¯¾æˆ¦ä¸­ã®å‡ºåŠ›
 	 * 
-	 * @param judge true: —LŒø‚È‰ñ“š, false: –³Œø‚È‰ñ“š
+	 * @param judge true: æœ‰åŠ¹ãªå›ç­”, false: ç„¡åŠ¹ãªå›ç­”
 	 */
 	public void printPlay(boolean judge){
 		if(n%2 == 0){
@@ -106,7 +106,7 @@ public class App {
 	
 	/**
 	 * prontFinish
-	 * ‘ÎíŒ‹‰Ê‚Ìo—Í
+	 * å¯¾æˆ¦çµæœã®å‡ºåŠ›
 	 */
 	public void printFinish(){
 		if(n%2 == 0){
@@ -118,17 +118,17 @@ public class App {
 
 	/**
 	 * isCollect
-	 * ‘I‘ğ‚³‚ê‚½’PŒê‚ª—LŒø‚Å‚ ‚é‚©‚ÌŒŸØ
+	 * é¸æŠã•ã‚ŒãŸå˜èªãŒæœ‰åŠ¹ã§ã‚ã‚‹ã‹ã®æ¤œè¨¼
 	 * 
-	 * @return (true: —LŒø, false: –³Œø)
+	 * @return (true: æœ‰åŠ¹, false: ç„¡åŠ¹)
 	 */
 	public boolean isCollect(){
 		char head = selectedWord.charAt(0);
-		// ’¼‘O‚Ì‘Šè‚Ì‰ñ“š‚ÌÅŒã‚Ì•¶š‚Ån‚Ü‚ç‚È‚¢’PŒê‚ğ•Ô‚µ‚½
+		// ç›´å‰ã®ç›¸æ‰‹ã®å›ç­”ã®æœ€å¾Œã®æ–‡å­—ã§å§‹ã¾ã‚‰ãªã„å˜èªã‚’è¿”ã—ãŸ
 		if(tailChar != head){
 			return false;
 		}
-		// Œ»“_‚Ì’PŒêŒQ‚ÉŠÜ‚Ü‚ê‚È‚¢’PŒê‚ğ•Ô‚µ‚½
+		// ç¾æ™‚ç‚¹ã®å˜èªç¾¤ã«å«ã¾ã‚Œãªã„å˜èªã‚’è¿”ã—ãŸ
 		if(!words.contains(selectedWord)){
 			return false;
 		}
@@ -138,9 +138,9 @@ public class App {
 
 	/**
 	 * setTailChar
-	 * ’¼‘O‚Ì’PŒê‚ÌÅŒã‚Ì•¶š‚ÌŠi”[
+	 * ç›´å‰ã®å˜èªã®æœ€å¾Œã®æ–‡å­—ã®æ ¼ç´
 	 * 
-	 * @param w Ši”[‚·‚é•¶š
+	 * @param w æ ¼ç´ã™ã‚‹æ–‡å­—
 	 */
 	public void setTailChar(String w){
 		tailChar = w.charAt(w.length()-1);
@@ -148,9 +148,9 @@ public class App {
 	
 	/**
 	 * setSelectedWord
-	 * ‘I‘ğ‚³‚ê‚½’PŒê‚ÌŠi”[
+	 * é¸æŠã•ã‚ŒãŸå˜èªã®æ ¼ç´
 	 * 
-	 * @param w Ši”[‚·‚é’PŒê
+	 * @param w æ ¼ç´ã™ã‚‹å˜èª
 	 */
 	public void setSelectedWord(String w){
 		selectedWord = w;
@@ -158,16 +158,16 @@ public class App {
 	
 	/**
 	 * updateN
-	 * s‰ñ”‚ÌXV
+	 * è©¦è¡Œå›æ•°ã®æ›´æ–°
 	 */
 	public void updateN(){
 		n++;
 	}
 	
 	/**
-	 * ƒƒCƒ“ŠÖ”
-	 * @param args ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“ˆø”
-	 * 			i0: æUAI‚Ì‹N“®ƒvƒƒOƒ‰ƒ€, 1: ŒãUAI‚Ì‹N“®ƒvƒƒOƒ‰ƒ€, 2: ŠJn’PŒê, 3~: ’PŒêŒQj
+	 * ãƒ¡ã‚¤ãƒ³é–¢æ•°
+	 * @param args ã‚³ãƒãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³å¼•æ•°
+	 * 			ï¼ˆ0: å…ˆæ”»AIã®èµ·å‹•ãƒ—ãƒ­ã‚°ãƒ©ãƒ , 1: å¾Œæ”»AIã®èµ·å‹•ãƒ—ãƒ­ã‚°ãƒ©ãƒ , 2: é–‹å§‹å˜èª, 3~: å˜èªç¾¤ï¼‰
 	 */
 	public static void main(String[] args) {
 		
@@ -176,13 +176,13 @@ public class App {
 
 		while(true){
 			try{
-				// ‰ñ“š‚µ‚½’PŒê‚ÌŠi”[
+				// å›ç­”ã—ãŸå˜èªã®æ ¼ç´
 				app.setSelectedWord(app.calledAI());
-				// Œ‹‰Êo—Í
+				// çµæœå‡ºåŠ›
 				isFinish = !app.isCollect();
 				app.printPlay(app.isCollect());
 				
-				// •s³‚È‰ñ“š‚Å‚ ‚é
+				// ä¸æ­£ãªå›ç­”ã§ã‚ã‚‹
 				if(isFinish){
 					app.printFinish();
 					break;

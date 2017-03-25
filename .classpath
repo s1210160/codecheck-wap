@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="java/ai/src/main/java"/>
+	<classpathentry kind="src" path="java/fw/src/main/java"/>
+	<classpathentry kind="lib" path="java/ai/target/exam2a-ai-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="java/fw/target/exam2a-framework-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="java/ai/target/classes"/>
+</classpath>

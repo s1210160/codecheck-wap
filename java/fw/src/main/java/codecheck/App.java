@@ -6,36 +6,28 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-// test
+
 public class App {
 	
-	// è©¦è¡Œå›æ•°
+	// s‰ñ”
 	private int n;
-<<<<<<< HEAD
 	// ’PŒêŒQ
-=======
-	// å˜èªè»
->>>>>>> 6c02ec8521c097d9632a9e51de4f2fc3bf80bdd2
 	private ArrayList<String> words;
-	// ç›´å‰ã®å˜èªã®æœ€å¾Œã®æ–‡å­—
+	// ’¼‘O‚Ì’PŒê‚ÌÅŒã‚Ì•¶š
 	private char tailChar;
-<<<<<<< HEAD
 	// ‰ñ“š‚³‚ê‚½’PŒê
-=======
-	// é¸æŠã•ã‚ŒãŸå˜èª
->>>>>>> 6c02ec8521c097d9632a9e51de4f2fc3bf80bdd2
 	private String selectedWord;
-	// å…ˆæ”»AIã®èµ·å‹•ãƒ—ãƒ­ã‚°ãƒ©ãƒ 
+	// æUAI‚Ì‹N“®ƒvƒƒOƒ‰ƒ€
 	private String firstAI;
-	// å¾Œæ”»AIã®èµ·å‹•ãƒ—ãƒ­ã‚°ãƒ©ãƒ 
+	// ŒãUAI‚Ì‹N“®ƒvƒƒOƒ‰ƒ€
 	private String secondAI;
 	
 	/**
-	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
-	 * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®åˆæœŸåŒ–
+	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	 * ƒtƒB[ƒ‹ƒh‚Ì‰Šú‰»
 	 * 
-	 * @param wã€€ã‚³ãƒãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³å¼•æ•°
-	 * 			ï¼ˆ0: å…ˆæ”»AIã®èµ·å‹•ãƒ—ãƒ­ã‚°ãƒ©ãƒ , 1: å¾Œæ”»AIã®èµ·å‹•ãƒ—ãƒ­ã‚°ãƒ©ãƒ , 2: é–‹å§‹å˜èª, 3~: å˜èªç¾¤ï¼‰
+	 * @param w@ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“ˆø”
+	 * 			i0: æUAI‚Ì‹N“®ƒvƒƒOƒ‰ƒ€, 1: ŒãUAI‚Ì‹N“®ƒvƒƒOƒ‰ƒ€, 2: ŠJn’PŒê, 3~: ’PŒêŒQj
 	 */
 	public App(String[] w){
 		// s‰ñ”‚Ì‰Šú‰»
@@ -45,11 +37,7 @@ public class App {
 		firstAI = w[0];
 		secondAI = w[1];
 		
-<<<<<<< HEAD
 		// ŠJn’PŒê‚ÌŠi”[
-=======
-		// åˆã‚ã®æ–‡å­—ã®æ ¼ç´
->>>>>>> 6c02ec8521c097d9632a9e51de4f2fc3bf80bdd2
 		selectedWord = w[2];
 		// ŠJn’PŒê‚ÌÅŒã‚Ì•¶š‚ÌŠi”[
 		setTailChar(selectedWord);
@@ -63,7 +51,7 @@ public class App {
 	
 	/**
 	 * calledAI
-	 * AIã®èµ·å‹•ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®å®Ÿè¡Œã¨çµæœå–å¾—
+	 * AI‚Ì‹N“®ƒvƒƒOƒ‰ƒ€‚ÌÀs‚ÆŒ‹‰Êæ“¾
 	 * 
 	 * @throws OutOfMemoryError, IOException, InterruptedException
 	 */
@@ -78,7 +66,7 @@ public class App {
 		String word = null;
 
 		try{
-			//*** AIã®èµ·å‹•ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®å®Ÿè¡Œ ***//
+			//*** AI‚Ì‹N“®ƒvƒƒOƒ‰ƒ€‚ÌÀs ***//
 			if(n%2 == 0){
 				command.add(firstAI);
 			}else{
@@ -92,7 +80,7 @@ public class App {
 			p.waitFor();
 			//************************//
 
-			//*** æ¨™æº–å‡ºåŠ›çµæœã®å–å¾— ***//
+			//*** •W€o—ÍŒ‹‰Ê‚Ìæ“¾ ***//
 			BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
 			word = reader.readLine();
 			
@@ -114,12 +102,8 @@ public class App {
 	
 	/**
 	 * printPlay
-	 * å¯¾æˆ¦ä¸­ã®å‡ºåŠ›
+	 * ‘Îí’†‚Ìo—Í
 	 * 
-<<<<<<< HEAD
-=======
-	 * @param judge true: æœ‰åŠ¹ãªå›ç­”, false: ç„¡åŠ¹ãªå›ç­”
->>>>>>> 6c02ec8521c097d9632a9e51de4f2fc3bf80bdd2
 	 */
 	public void printPlay(boolean judge){
 		// æU/ŒãU‚Ì”»’è
@@ -141,7 +125,7 @@ public class App {
 	
 	/**
 	 * prontFinish
-	 * å¯¾æˆ¦çµæœã®å‡ºåŠ›
+	 * ‘ÎíŒ‹‰Ê‚Ìo—Í
 	 */
 	public void printFinish(){
 		// æU/ŒãU‚Ì”»’è
@@ -153,29 +137,20 @@ public class App {
 	}
 
 	/**
-<<<<<<< HEAD
 	 * isCorrect
 	 * ‰ñ“š‚³‚ê‚½’PŒê‚Ì—LŒø«”»’è
-=======
-	 * isCollect
-	 * é¸æŠã•ã‚ŒãŸå˜èªãŒæœ‰åŠ¹ã§ã‚ã‚‹ã‹ã®æ¤œè¨¼
->>>>>>> 6c02ec8521c097d9632a9e51de4f2fc3bf80bdd2
 	 * 
-	 * @return (true: æœ‰åŠ¹, false: ç„¡åŠ¹)
+	 * @return (true: —LŒø, false: –³Œø)
 	 */
 	public boolean isCorrect(){
 		// ‰ñ“š‚³‚ê‚½’PŒê‚Ìæ“ª•¶š
 		char head = selectedWord.charAt(0);
-<<<<<<< HEAD
 		
 		// ’¼‘O‚Ì‘Šè‚Ì‰ñ“š‚ÌÅŒã‚Ì•¶š‚Ån‚Ü‚ç‚È‚¢’PŒê‚ğ•Ô‚µ‚½
-=======
-		// ç›´å‰ã®ç›¸æ‰‹ã®å›ç­”ã®æœ€å¾Œã®æ–‡å­—ã§å§‹ã¾ã‚‰ãªã„å˜èªã‚’è¿”ã—ãŸ
->>>>>>> 6c02ec8521c097d9632a9e51de4f2fc3bf80bdd2
 		if(tailChar != head){
 			return false;
 		}
-		// ç¾æ™‚ç‚¹ã®å˜èªç¾¤ã«å«ã¾ã‚Œãªã„å˜èªã‚’è¿”ã—ãŸ
+		// Œ»“_‚Ì’PŒêŒQ‚ÉŠÜ‚Ü‚ê‚È‚¢’PŒê‚ğ•Ô‚µ‚½
 		if(!words.contains(selectedWord)){
 			return false;
 		}
@@ -185,13 +160,9 @@ public class App {
 
 	/**
 	 * setTailChar
-	 * ç›´å‰ã®å˜èªã®æœ€å¾Œã®æ–‡å­—ã®æ ¼ç´
+	 * ’¼‘O‚Ì’PŒê‚ÌÅŒã‚Ì•¶š‚ÌŠi”[
 	 * 
-<<<<<<< HEAD
 	 * @param w ’¼‘O‚Ì’PŒê
-=======
-	 * @param w æ ¼ç´ã™ã‚‹æ–‡å­—
->>>>>>> 6c02ec8521c097d9632a9e51de4f2fc3bf80bdd2
 	 */
 	public void setTailChar(String w){
 		tailChar = w.charAt(w.length()-1);
@@ -199,13 +170,9 @@ public class App {
 	
 	/**
 	 * setSelectedWord
-<<<<<<< HEAD
 	 * ‰ñ“š‚³‚ê‚½’PŒê‚ÌŠi”[
-=======
-	 * é¸æŠã•ã‚ŒãŸå˜èªã®æ ¼ç´
->>>>>>> 6c02ec8521c097d9632a9e51de4f2fc3bf80bdd2
 	 * 
-	 * @param w æ ¼ç´ã™ã‚‹å˜èª
+	 * @param w Ši”[‚·‚é’PŒê
 	 */
 	public void setSelectedWord(String w){
 		if(w.equals("null")){
@@ -216,15 +183,10 @@ public class App {
 	}
 	
 	/**
-<<<<<<< HEAD
 	 * getSelectedWord
 	 * selectedWord‚Ì’l‚Ìæ“¾
 	 * 
 	 * @return selectedWord
-=======
-	 * updateN
-	 * è©¦è¡Œå›æ•°ã®æ›´æ–°
->>>>>>> 6c02ec8521c097d9632a9e51de4f2fc3bf80bdd2
 	 */
 	public String getSelectedWord(){
 		return selectedWord;
@@ -244,9 +206,9 @@ public class App {
 	}
 	
 	/**
-	 * ãƒ¡ã‚¤ãƒ³é–¢æ•°
-	 * @param args ã‚³ãƒãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³å¼•æ•°
-	 * 			ï¼ˆ0: å…ˆæ”»AIã®èµ·å‹•ãƒ—ãƒ­ã‚°ãƒ©ãƒ , 1: å¾Œæ”»AIã®èµ·å‹•ãƒ—ãƒ­ã‚°ãƒ©ãƒ , 2: é–‹å§‹å˜èª, 3~: å˜èªç¾¤ï¼‰
+	 * ƒƒCƒ“ŠÖ”
+	 * @param args ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“ˆø”
+	 * 			i0: æUAI‚Ì‹N“®ƒvƒƒOƒ‰ƒ€, 1: ŒãUAI‚Ì‹N“®ƒvƒƒOƒ‰ƒ€, 2: ŠJn’PŒê, 3~: ’PŒêŒQj
 	 */
 	public static void main(String[] args) {
 		
@@ -270,7 +232,6 @@ public class App {
 
 		while(true){
 			try{
-<<<<<<< HEAD
 				
 				// ‰ñ“š‚µ‚½’PŒê‚ÌŠi”[
 				word = app.calledAI();
@@ -280,16 +241,6 @@ public class App {
 				
 				// I—¹ğŒ
 				if(!app.isCorrect()){
-=======
-				// å›ç­”ã—ãŸå˜èªã®æ ¼ç´
-				app.setSelectedWord(app.calledAI());
-				// çµæœå‡ºåŠ›
-				isFinish = !app.isCollect();
-				app.printPlay(app.isCollect());
-				
-				// ä¸æ­£ãªå›ç­”ã§ã‚ã‚‹
-				if(isFinish){
->>>>>>> 6c02ec8521c097d9632a9e51de4f2fc3bf80bdd2
 					app.printFinish();
 					break;
 				}
